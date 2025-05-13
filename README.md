@@ -119,8 +119,8 @@ Desarrollar un sistema de gestión de biblioteca utilizando Spring Framework, im
 > 💡 **Nota**: Esta estimación considera la experiencia adquirida en trabajos anteriores y la complejidad de implementar una arquitectura en capas con Spring Framework. El tiempo se ha ajustado considerando que no se requiere implementación de persistencia real.
 
 ## 👨‍🎓 Información del Alumno
-- **Nombre y Apellido**: [Nombre y Apellido del Alumno]
-- **Legajo**: [Número de Legajo]
+- **Nombre y Apellido**: Valentina Artola
+- **Legajo**: 62080
 
 ## 📋 Requisitos Previos
 
@@ -141,6 +141,65 @@ Desarrollar un sistema de gestión de biblioteca utilizando Spring Framework, im
 - JUnit 5.10.1
 - Mockito 5.8.0
 - Git y GitHub
+
+## Ejecución del sistema
+### Clonar repositorio
+```java
+git clone git@github.com:um-programacion-ii/programacion-2-trabajo-practico-4-valeartola.git
+```
+### Entrar al directorio del proyecto
+```java
+cd programacion-2-trabajo-practico-4-valeartola
+```
+### Ejecutar la aplicación
+```java
+mvn spring-boot:run
+```
+### Ejecutar test
+```java
+mvn test
+```
+
+## Endpoints disponibles
+
+### Libros
+
+| Método | Ruta               | Descripción                   |
+| ------ | ------------------ |-------------------------------|
+| GET    | `/api/libros`      | Listar libros                 |
+| GET    | `/api/libros/{id}` | Obtener un libro por su id    |
+| POST   | `/api/libros`      | Añadir un nuevo libro         |
+| PUT    | `/api/libros/{id}` | Actualizar un libro existente |
+| DELETE | `/api/libros/{id}` | Eliminar un libro por su id   |
+
+### Prestamos
+
+| Método | Ruta                  | Descripción                      |
+| ------ |-----------------------|----------------------------------|
+| GET    | `/api/prestamos`      | Listar prestamos                 |
+| GET    | `/api/prestamos/{id}` | Obtener un prestamos por su id   |
+| POST   | `/api/prestamos`      | Añadir un nuevo prestamo         |
+| PUT    | `/api/prestamos/{id}` | Actualizar un prestamo existente |
+| DELETE | `/api/prestamos/{id}` | Eliminar un prestamo por su id   |
+
+### Usuarios
+
+| Método | Ruta                 | Descripción                     |
+| ------ | -------------------- |---------------------------------|
+| GET    | `/api/usuarios`      | Listar usuarios                 |
+| GET    | `/api/usuarios/{id}` | Obtener un usuario por id       |
+| POST   | `/api/usuarios`      | Añadir un nuevo usuario         |
+| PUT    | `/api/usuarios/{id}` | Actualizar un usuario existente |
+| DELETE | `/api/usuarios/{id}` | Eliminar un usuario por id      |
+
+
+## Arquitectura 
+
+- Recursos:  entidades de dominio (Libro, Usuario, Prestamo)
+- Controller: exponen endpoints REST.
+- Repository: simula acceso a datos.
+- Service: contiene lógica de negocios.
+
 
 ## 📘 Etapas del Trabajo
 
