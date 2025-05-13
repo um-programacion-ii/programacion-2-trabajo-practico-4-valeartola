@@ -41,7 +41,7 @@ class LibroControllerTest {
                 .andExpect(jsonPath("$.length()").value(2))
                 .andExpect(jsonPath("$[0].isbn").value("111-222-333"));
     }
-    
+
     @Test
     void post_crearLibro_deberiaRetornarLibroCreado() throws Exception {
         Libro input = new Libro(null, "999-888-777", "Nuevo", "AutorN", EstadoLibro.DISPONIBLE);
