@@ -4,5 +4,5 @@ public enum EstadoLibro {
 
     DISPONIBLE,
     PRESTADO,
-    EN_PREPARACION
+    EN_REPARACION
 }
